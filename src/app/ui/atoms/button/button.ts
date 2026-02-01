@@ -7,7 +7,7 @@ import { Text } from '../text/text';
   selector: 'hack-button',
   imports: [Icon, Text, Bold],
   templateUrl: './button.html',
-  styleUrls: ['./button.css', '../../../styles/button.shared.css'],
+  styleUrls: ['./button.css', '../../styles/button.shared.css'],
 })
 export class Button {
   @Input() icon!: string;

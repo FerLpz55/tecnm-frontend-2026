@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Button } from '../../shared/atoms/button/button';
+import { Button } from '../../atoms/button/button';
 
 @Component({
   selector: 'hack-header',
