@@ -1,0 +1,54 @@
+:host {
+  --layer-1-fill-color: #ccd7e9;
+  --layer-2-fill-color: #98b1d4;
+  --layer-3-fill-color: #618cbe;
+  --layer-4-fill-color: var(--main);
+}
+.bg-container {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+}
+.background .layer path:not(.step-1) {
+  visibility: hidden;
+}
+
+.background .layer {
+  animation: top-to-bottom 4s infinite ease-in-out;
+}
+
+.background .layer-1 {
+  animation-delay: 0.3s;
+  fill: var(--layer-1-fill-color);
+}
+
+.background .layer-2 {
+  animation-delay: 0.2s;
+  fill: var(--layer-2-fill-color);
+}
+
+.background .layer-3 {
+  animation-delay: 0.1s;
+  fill: var(--layer-3-fill-color);
+}
+
+.background .layer-4 {
+  fill: var(--layer-4-fill-color);
+}
+
+@keyframes top-to-bottom {
+  0%,
+  100% {
+    translate: 0 -10%;
+  }
+  50% {
+    translate: 0 0;
+  }
+}

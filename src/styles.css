@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --white: #ffffff;
+  --light: #98b1d4;
+  --main: #004772;
+  --opaque: #618cbe;
+}
