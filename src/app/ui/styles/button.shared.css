@@ -70,6 +70,18 @@ hack-text {
   }
 }
 
+:host[mode='transparent'] {
+  hack-icon,
+  hack-text {
+    color: var(--btn-color);
+  }
+
+  button,
+  a {
+    background-color: transparent;
+  }
+}
+
 :is(button, a)[disabled],
 a.disabled {
   cursor: not-allowed;
