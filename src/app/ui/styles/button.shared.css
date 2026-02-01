@@ -1,0 +1,83 @@
+:host {
+  --btn-padding: 1rem 2rem;
+  --btn-radius: 0.5rem;
+  --btn-color: initial;
+  --btn-direction: row;
+  --btn-justify: center;
+  --btn-gap: 0.8rem;
+  --btn-display-icon: initial;
+  --btn-display-label: initial;
+  text-align: center;
+}
+
+button,
+a {
+  width: inherit;
+  height: inherit;
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  background-color: var(--white);
+  display: flex;
+  flex-direction: var(--btn-direction);
+  align-items: center;
+  justify-content: var(--btn-justify);
+  border: none;
+  gap: var(--btn-gap);
+  cursor: pointer;
+  transition-property: background-color, filter;
+  transition: var(--trans-easing) var(--trans-duration);
+  text-align: inherit;
+  text-decoration: none;
+}
+
+button:not([disabled]):hover,
+a:hover {
+  filter: brightness(0.9);
+}
+
+hack-icon,
+hack-text,
+hack-bold {
+  color: var(--btn-color);
+}
+
+hack-icon {
+  width: 1.75rem;
+  display: var(--btn-display-icon);
+}
+
+hack-text {
+  display: var(--btn-display-label);
+  text-align: inherit;
+}
+
+:host[mode='dark'] {
+  hack-icon,
+  hack-text {
+    color: var(--white);
+  }
+
+  button,
+  a {
+    background-color: var(--btn-color);
+  }
+}
+
+:host[mode='outlined'] {
+  button,
+  a {
+    border: 1px solid var(--light);
+  }
+}
+
+:is(button, a)[disabled],
+a.disabled {
+  cursor: not-allowed;
+  --btn-color: var(--gray);
+}
+
+@media (max-width: 400px) {
+  :host {
+    --btn-padding: 0.8rem 1.6rem;
+  }
+}

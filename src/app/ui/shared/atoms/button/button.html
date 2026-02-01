@@ -1,0 +1,7 @@
+<button (click)="onclick.emit()" [type]="type" [disabled]="disabled" (focusin)="isFocused = true"
+        (focusout)="isFocused = false">
+  <hack-icon [icon]="icon"/>
+  <hack-bold>
+    <ng-content></ng-content>
+  </hack-bold>
+</button>

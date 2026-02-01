@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *,
 *:after,
 *:before {
@@ -9,8 +12,25 @@
 }
 
 :root {
+  font-size: 12px;
   --white: #ffffff;
   --light: #98b1d4;
   --main: #004772;
   --opaque: #618cbe;
+
+  --title-font-family: Montserrat;
+  --title-font-size: 3rem;
+  --title-font-weight: 400;
+
+  --subtitle-font-family: ABeeZee;
+  --subtitle-font-size: 2rem;
+  --subtitle-font-weight: 400;
+
+  --bold-font-family: Poppins;
+  --bold-font-size: 1.17rem;
+  --bold-font-weight: 700;
+
+  --text-font-family: Poppins;
+  --text-font-size: 1rem;
+  --text-font-weight: 400;
 }

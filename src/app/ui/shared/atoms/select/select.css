@@ -1,0 +1,80 @@
+:host {
+  display: block;
+  height: 3.75rem;
+  --select-options-count: 1;
+  --select-color: var(--main);
+  --select-border-color: var(--main);
+}
+
+:host[state="folded"] .nav-wrapper {
+  height: 3.75rem;
+}
+
+:host[state="unfolded"] .nav-wrapper {
+  height: calc((var(--select-options-count) + 1) * 3.75rem);
+}
+
+.nav-wrapper {
+  overflow: hidden;
+  transition: height var(--trans-easing) var(--trans-duration);
+  border-radius: 0.5rem;
+  position: relative;
+  border: 1px solid var(--select-border-color);
+}
+
+.display-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: 50%;
+  right: 0.6rem;
+  translate: 0 -50%;
+  padding: 0.5rem;
+  color: var(--main-d1);
+  transition: rotate var(--trans-easing) var(--trans-duration);
+  pointer-events: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+:host[state="unfolded"] .display-icon {
+  rotate: -90deg;
+
+}
+
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  width: 100%;
+}
+
+li {
+  width: 100%;
+}
+
+nog-button {
+  width: 100%;
+  height: 3.75rem;
+  --btn-radius: 0;
+  --btn-justify: start;
+  --btn-padding: 0 1rem;
+  --btn-gap: 1rem;
+  --btn-color: var(--select-color);
+  --btn-display-icon: inherit;
+  text-align: start;
+  color: var(--main);
+}
+
+.selected {
+  --btn-color: var(--main-d1);
+}

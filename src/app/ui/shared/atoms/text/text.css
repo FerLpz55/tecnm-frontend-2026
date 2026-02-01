@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  color: inherit;
+  text-align: inherit;
+  font-family: var(--text-font-family), sans-serif;
+  font-size: var(--text-font-size);
+  font-style: normal;
+  font-weight: var(--text-font-weight);
+  overflow: inherit;
+  text-overflow: inherit;
+  white-space: inherit;
+}

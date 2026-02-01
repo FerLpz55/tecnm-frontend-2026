@@ -1,0 +1,10 @@
+:host {
+  --panel-padding: 2rem 3rem;
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  padding: var(--panel-padding);
+  border-radius: 1rem;
+  border: 1px solid var(--stroke, #C2A8A3);
+  background: var(--white, #FFF);
+}
