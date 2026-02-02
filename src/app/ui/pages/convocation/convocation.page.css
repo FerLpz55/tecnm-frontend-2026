@@ -1,0 +1,81 @@
+section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100lvh;
+}
+
+section.intersected .hour {
+  transform: translate(-15rem, -15rem);
+}
+
+section.intersected .date {
+  transform: translate(15rem, -3rem);
+}
+
+section.intersected .place {
+  transform: translate(-12rem, 10rem);
+}
+
+section.intersected figure {
+  opacity: 1;
+}
+
+section.intersected .left {
+  translate: 0;
+  opacity: 1;
+}
+
+.left {
+  max-width: 44rem;
+  translate: -20% 0;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.right {
+  width: 100%;
+  max-width: 50rem;
+  position: relative;
+}
+
+hack-button {
+  margin-top: 1rem;
+  --btn-color: var(--main);
+}
+
+figure {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  opacity: 0;
+}
+
+figure,
+.left {
+  transition-property: opacity, translate;
+  transition: var(--trans-duration) var(--trans-easing);
+}
+
+.hour {
+  color: var(--main);
+}
+
+.date {
+  color: var(--opaque);
+}
+
+.place {
+  color: var(--light);
+}
+
+figure hack-icon {
+  width: 10.25rem;
+  height: 10.25rem;
+}

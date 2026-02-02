@@ -17,6 +17,11 @@ export class Intersectable implements AfterViewInit, OnDestroy {
   @Input()
   Opts?: IntersectionObserverInit;
 
+  @Input()
+  BottomMargin!: string;
+  @Input()
+  TopMargin!: string;
+
   @HostBinding('class.intersected')
   protected _isIntersecting = false;
 
@@ -27,7 +32,10 @@ export class Intersectable implements AfterViewInit, OnDestroy {
         this._isIntersecting = isIntersecting;
         console.log(isIntersecting);
       },
-      { rootMargin: '-70% 0% 0% 0%', ...this.Opts },
+      {
+        rootMargin: `${this.TopMargin || '-70%'} 0% ${this.BottomMargin || '0%'} 0%`,
+        ...this.Opts,
+      },
     );
     this._intersectionObserver.observe(this._ref.nativeElement);
   }

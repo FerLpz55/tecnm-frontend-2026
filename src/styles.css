@@ -33,4 +33,7 @@
   --text-font-family: Poppins;
   --text-font-size: 1.17rem;
   --text-font-weight: 400;
+
+  --trans-duration: 0.5s;
+  --trans-easing: ease;
 }

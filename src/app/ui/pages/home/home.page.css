@@ -24,7 +24,7 @@ img,
 hack-text,
 nav {
   transition-property: translate, opacity;
-  transition: 0.5s ease;
+  transition: var(--trans-duration) var(--trans-easing);
 }
 
 hack-text {
