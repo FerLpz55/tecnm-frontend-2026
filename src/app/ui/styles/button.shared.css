@@ -53,7 +53,8 @@ hack-text {
 
 :host[mode='dark'] {
   hack-icon,
-  hack-text {
+  hack-text,
+  hack-bold {
     color: var(--white);
   }
 
@@ -66,13 +67,14 @@ hack-text {
 :host[mode='outlined'] {
   button,
   a {
-    border: 1px solid var(--light);
+    border: 1px solid var(--main);
   }
 }
 
 :host[mode='transparent'] {
   hack-icon,
-  hack-text {
+  hack-text,
+  hack-bold {
     color: var(--btn-color);
   }
 

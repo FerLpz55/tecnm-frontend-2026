@@ -1,11 +1,10 @@
 import { Component, EventEmitter, HostBinding, Input, Output } from '@angular/core';
 import { Bold } from '../bold/bold';
 import { Icon } from '../icon/icon';
-import { Text } from '../text/text';
 
 @Component({
   selector: 'hack-button',
-  imports: [Icon, Text, Bold],
+  imports: [Icon, Bold],
   templateUrl: './button.html',
   styleUrls: ['./button.css', '../../styles/button.shared.css'],
 })
