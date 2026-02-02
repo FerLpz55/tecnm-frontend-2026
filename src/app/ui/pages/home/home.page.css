@@ -20,6 +20,26 @@ img {
   width: 30rem;
 }
 
+img,
+hack-text,
+nav {
+  transition-property: translate, opacity;
+  transition: 0.5s ease;
+}
+
+hack-text {
+  transition-delay: 0.1s;
+}
+
+nav {
+  transition-delay: 0.2s;
+}
+
+section:not(.intersected) :is(img, hack-text, nav) {
+  translate: 0 -20%;
+  opacity: 0;
+}
+
 p {
   text-align: center;
 }
