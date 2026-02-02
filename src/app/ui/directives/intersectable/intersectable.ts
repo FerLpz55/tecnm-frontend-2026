@@ -30,7 +30,6 @@ export class Intersectable implements AfterViewInit, OnDestroy {
     this._intersectionObserver = new IntersectionObserver(
       ([{ isIntersecting }]) => {
         this._isIntersecting = isIntersecting;
-        console.log(isIntersecting);
       },
       {
         rootMargin: `${this.TopMargin || '-70%'} 0% ${this.BottomMargin || '0%'} 0%`,
