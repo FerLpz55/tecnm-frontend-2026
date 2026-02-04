@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  --swiper-theme-color: var(--main);
+}
+
+.swiper-wrapper {
+  transition-timing-function: var(--trans-easing);
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 1rem;
+}

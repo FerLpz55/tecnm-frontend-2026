@@ -1,0 +1,21 @@
+<section hackIntersectable BottomMargin="-50%" TopMargin="-50%">
+  <h3>
+    <hack-title>Banco Proyectos</hack-title>
+  </h3>
+  <p>
+    <hack-text>
+      Proyectos registrados hasta el momento, ¡Date prisa y registra el tuyo ahora!
+    </hack-text>
+  </p>
+
+  <hack-button icon="team" mode="dark">Registro</hack-button>
+  <hack-panel>
+    <hack-gallery [options]="{slidesPerView:2, centeredSlides:true}">
+      @for (project of _projects; track $index) {
+        <div class="swiper-slide">
+          <hack-project-card [Project]="project" />
+        </div>
+      }
+    </hack-gallery>
+  </hack-panel>
+</section>

@@ -1,0 +1,23 @@
+<hack-panel>
+  <hack-title>{{ Project.Name }}</hack-title>
+  <hack-bold>Equipo {{ Project.Team }}</hack-bold>
+  <div class="tags">
+    <hack-button class="tag campus" mode="dark" icon="location"
+      >Campus {{ Project.Campus }}</hack-button
+    >
+    <hack-button class="tag semester" mode="dark" icon="student"
+      >{{ Project.SemesterRange | semester }} Semestre</hack-button
+    >
+    <hack-button class="tag members" mode="dark" icon="team"
+      >{{ Project.Members.size }} integrantes</hack-button
+    >
+  </div>
+  <p>
+    <hack-text
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam deleniti fuga pariatur
+      praesentium consectetur tempore assumenda quaerat id, non accusantium ipsa, sint esse ad
+      laboriosam facere, voluptatibus officiis commodi!
+    </hack-text>
+  </p>
+  <hack-button icon="like" mode="outlined" class="like">{{ Project.Likes }}</hack-button>
+</hack-panel>

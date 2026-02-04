@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  max-width: 45.75rem;
+}
+
+hack-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  height: 2.75rem;
+  --btn-gap: 0.5rem;
+  --btn-padding: 0.5rem 1rem;
+}
+
+.campus {
+  --btn-color: var(--main);
+}
+
+.semester {
+  --btn-color: var(--opaque);
+}
+
+.members {
+  width: 13rem;
+  --btn-color: var(--light);
+}
+
+.like {
+  align-self: end;
+  --btn-color: var(--main);
+  --btn-padding: 1rem;
+  --btn-gap: 0.7rem;
+}
