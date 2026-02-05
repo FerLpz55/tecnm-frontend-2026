@@ -1,0 +1,28 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  max-width: 90rem;
+  width: 100%;
+}
+
+hack-labeled-subtitle {
+  color: var(--main);
+}
+
+.right {
+  max-width: 39rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: end;
+  align-items: end;
+}
+
+.right hack-button {
+  --btn-color: var(--main);
+}

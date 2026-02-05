@@ -63,6 +63,10 @@ export class Gallery implements AfterViewInit, OnDestroy {
     return this.swiper && this.swiper?.activeIndex !== this.swiper?.slides.length - 1;
   }
 
+  public goLast() {
+    this.swiper.slideTo(this.swiper.slides.length - 1);
+  }
+
   public goTo(index: number) {
     this.swiper.slideTo(index);
   }
@@ -74,5 +78,9 @@ export class Gallery implements AfterViewInit, OnDestroy {
 
   public manualInit() {
     this.swiper.init();
+  }
+
+  public refresh() {
+    this.swiper.update();
   }
 }

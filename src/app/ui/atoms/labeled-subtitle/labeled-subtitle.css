@@ -4,12 +4,7 @@
   gap: 0.5rem;
 }
 
-nog-icon {
+hack-icon {
   width: 2.5rem;
   height: 2.5rem;
-}
-
-span {
-  font-family: var(--subtitle-family), sans-serif;
-  font-size: var(--subtitle-font-size);
 }

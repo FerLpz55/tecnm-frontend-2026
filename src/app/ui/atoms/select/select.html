@@ -1,13 +1,13 @@
 <div class="nav-wrapper">
   <nav>
-    <hack-button (onclick)="switchMode()" class="selected" [icon]="selected.icon||''">{{ selected.label }}</hack-button>
+    <hack-button (Click)="switchMode()" class="selected" [icon]="selected.icon||''">{{ selected.label }}</hack-button>
     <hack-icon icon="arrow" class="display-icon"></hack-icon>
     <ul>
       @for (option of sortedOptions; track option.value) {
         <li>
           <hack-button [mode]="option.value==selected.value ? 'dark' : 'clear'"
                       [icon]="showIcons&&option.icon ? option.icon : ''"
-                      (onclick)="onSelect(option.value)">
+                      (Click)="onSelect(option.value)">
             {{ option.label }}
           </hack-button>
         </li>

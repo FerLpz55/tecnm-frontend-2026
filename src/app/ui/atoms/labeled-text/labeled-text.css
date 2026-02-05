@@ -4,7 +4,11 @@
   align-items: center;
 }
 
-nog-icon {
+hack-icon {
   width: 1.75rem;
   height: 1.75rem;
+}
+
+hack-text:empty {
+  display: none;
 }

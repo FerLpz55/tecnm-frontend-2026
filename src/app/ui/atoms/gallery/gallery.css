@@ -3,6 +3,10 @@
   --swiper-theme-color: var(--main);
 }
 
+.swiper {
+  overflow-x: clip;
+  overflow-y: visible;
+}
 .swiper-wrapper {
   transition-timing-function: var(--trans-easing);
 }

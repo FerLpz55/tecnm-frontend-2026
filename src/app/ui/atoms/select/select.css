@@ -1,17 +1,18 @@
 :host {
   display: block;
-  height: 3.75rem;
+  --select-height: 3.75rem;
   --select-options-count: 1;
   --select-color: var(--main);
-  --select-border-color: var(--main);
+  --select-border-color: var(--light);
+  height: var(--select-height);
 }
 
-:host[state="folded"] .nav-wrapper {
-  height: 3.75rem;
+:host[state='folded'] .nav-wrapper {
+  height: var(--select-height);
 }
 
-:host[state="unfolded"] .nav-wrapper {
-  height: calc((var(--select-options-count) + 1) * 3.75rem);
+:host[state='unfolded'] .nav-wrapper {
+  height: calc((var(--select-options-count) + 1) * var(--select-height));
 }
 
 .nav-wrapper {
@@ -30,7 +31,7 @@
   right: 0.6rem;
   translate: 0 -50%;
   padding: 0.5rem;
-  color: var(--main-d1);
+  color: var(--main);
   transition: rotate var(--trans-easing) var(--trans-duration);
   pointer-events: none;
 }
@@ -42,11 +43,9 @@ nav {
   position: relative;
 }
 
-:host[state="unfolded"] .display-icon {
+:host[state='unfolded'] .display-icon {
   rotate: -90deg;
-
 }
-
 
 ul {
   list-style: none;
@@ -62,9 +61,9 @@ li {
   width: 100%;
 }
 
-nog-button {
+hack-button {
   width: 100%;
-  height: 3.75rem;
+  height: var(--select-height);
   --btn-radius: 0;
   --btn-justify: start;
   --btn-padding: 0 1rem;
@@ -76,5 +75,5 @@ nog-button {
 }
 
 .selected {
-  --btn-color: var(--main-d1);
+  --btn-color: var(--main);
 }

@@ -2,6 +2,7 @@ import { Campus } from './campus';
 import { Student } from './student';
 import { Technology } from './technology';
 
+//TODO: add team object to this structure in the next refactor
 export class Project {
   public Team: string = '';
   public Name: string = '';

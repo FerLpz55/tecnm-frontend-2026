@@ -13,6 +13,6 @@ export class Button {
   @Input() type: 'submit' | 'reset' | 'button' = 'button';
   @Input() disabled: boolean | null = false;
   @Input() @HostBinding('attr.mode') mode: 'clear' | 'dark' | 'outlined' | 'transparent' = 'clear';
-  @Output() onclick = new EventEmitter<void>();
+  @Output() Click = new EventEmitter<void>();
   public isFocused = false;
 }

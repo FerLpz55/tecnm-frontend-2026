@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+hack-gallery {
+  width: 34.33rem;
+}
+
+hack-button {
+  height: 2.75rem;
+  --btn-color: var(--opaque);
+  --btn-gap: 0.5rem;
+  --btn-padding: 0.5rem 1rem;
+}
+.swiper-slide {
+  width: fit-content;
+}

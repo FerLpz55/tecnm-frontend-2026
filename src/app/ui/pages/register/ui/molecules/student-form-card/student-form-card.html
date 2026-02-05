@@ -1,0 +1,28 @@
+<hack-panel>
+  <hack-labeled-text icon="person">Integrante</hack-labeled-text>
+  <hack-input-label icon="person" class="name">
+    <hack-text-input
+      [(ngModel)]="Student.Name"
+      (ngModelChange)="Change.emit()"
+      Placeholder="Nombre completo"
+    />
+  </hack-input-label>
+  <div class="row">
+    <hack-select
+      [options]="_semesterOptions"
+      [removeDefault]="true"
+      [default]="-1"
+      [showIcons]="true"
+      class="semester"
+      [(ngModel)]="Student.Semester"
+      (ngModelChange)="Change.emit()"
+    />
+    <hack-input-label icon="credential" class="control-number">
+      <hack-text-input
+        [(ngModel)]="Student.ControlNumber"
+        (ngModelChange)="Change.emit()"
+        Placeholder="N. Control"
+      />
+    </hack-input-label>
+  </div>
+</hack-panel>

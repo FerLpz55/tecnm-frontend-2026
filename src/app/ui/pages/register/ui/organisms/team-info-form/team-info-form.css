@@ -1,0 +1,15 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+hack-input-label,
+hack-labeled-text {
+  color: var(--opaque);
+}
+
+.continue {
+  align-self: end;
+  --btn-color: var(--main);
+}

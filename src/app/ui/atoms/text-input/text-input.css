@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  height: 3.75rem;
+}
+
+input {
+  height: 100%;
+  width: 100%;
+  align-self: stretch;
+  border-radius: 0.5rem;
+  border: 1px solid var(--light);
+  padding: 1rem;
+  font-family: var(--text-font-family), sans-serif;
+  font-size: var(--text-font-size);
+  transition-property: border-color, outline-color;
+  transition: var(--trans-easing) var(--trans-duration);
+}
+
+input::placeholder {
+  color: var(--light);
+}

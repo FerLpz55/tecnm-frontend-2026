@@ -1,0 +1,9 @@
+<input
+  [type]="Type"
+  (input)="onInput()"
+  (keydown)="Keydown.emit($event)"
+  [(ngModel)]="Value"
+  (focusin)="FocusSubject.next(true)"
+  (focusout)="FocusSubject.next(false)"
+  [placeholder]="Placeholder"
+/>

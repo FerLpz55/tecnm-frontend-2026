@@ -1,0 +1,19 @@
+<form [formGroup]="_form">
+  <hack-input-label icon="team">
+    <span text> Nombre del equipo</span>
+    <hack-text-input formControlName="Name" />
+  </hack-input-label>
+  <hack-input-label icon="institution">
+    <span text>Campus</span>
+    <hack-select
+      [options]="_campusOptions"
+      default="none"
+      [showIcons]="true"
+      [removeDefault]="true"
+      formControlName="Campus"
+    />
+  </hack-input-label>
+  <hack-labeled-text icon="team">Integrantes</hack-labeled-text>
+  <hack-student-list formControlName="Members" />
+  <hack-button icon="team" class="continue" mode="dark">Continuar registro</hack-button>
+</form>

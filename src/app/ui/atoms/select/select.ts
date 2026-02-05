@@ -19,10 +19,10 @@ import { Icon } from '../icon/icon';
 })
 export class Select implements ControlValueAccessor, OnInit {
   @Input({ required: true }) public options!: LabeledValue<any>[];
-  @Input() public default!: string;
+  @Input() public default!: any;
   @Input() public showIcons = false;
   @Input() public removeDefault = false;
-  public value = '';
+  public value: any;
 
   @HostBinding('style.--btn-display-icon') protected displayIcons: 'block' | 'none' = 'none';
   @HostBinding('style.--select-options-count') protected optionsCount!: number;
@@ -41,9 +41,10 @@ export class Select implements ControlValueAccessor, OnInit {
   private onTouched = () => { };
   private isDisabled = false;
 
-  writeValue(value: string): void {
-    this.value = value;
+  writeValue(value: any): void {
+    console.log({ value });
     this.selected = this.getOption(value);
+    this.value = this.selected.value;
   }
 
   registerOnChange(fn: any): void {
@@ -59,7 +60,9 @@ export class Select implements ControlValueAccessor, OnInit {
   }
 
   ngOnInit() {
+    console.log(this.default);
     this.defaultAsOption = this.getOption(this.default) || this.fallbackDefaultOption;
+    console.log(this.defaultAsOption);
     this.selected = this.defaultAsOption;
     if (!this.removeDefault) this.options.push(this.defaultAsOption);
     this.sortOptions();
@@ -67,7 +70,11 @@ export class Select implements ControlValueAccessor, OnInit {
     this.displayIcons = this.showIcons ? 'block' : 'none';
   }
 
-  protected onSelect(selection: string) {
+  protected onSelect(selection: any) {
+    if (this.removeDefault && this.selected.value == this.default) {
+      this.options = this.options.filter((o) => o.value != this.default);
+      this.optionsCount--;
+    }
     this.writeValue(selection);
     this.onChange(selection);
     this.onTouched();
@@ -83,7 +90,7 @@ export class Select implements ControlValueAccessor, OnInit {
     this.sortedOptions = this.options.sort((a, b) => (a === this.selected ? -1 : 1));
   }
 
-  private getOption(value: string) {
+  private getOption(value: any) {
     return this.options.filter((option) => option.value == value)[0] || this.defaultAsOption;
   }
 }

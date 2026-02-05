@@ -1,0 +1,8 @@
+<hack-gallery [options]="{centeredSlides:true}">
+  @for (student of _students; track $index) {
+    <div class="swiper-slide">
+      <hack-student-form-card [Student]="student"/>
+    </div>
+  }
+</hack-gallery>
+<hack-button icon="add" mode="dark" (Click)="AddNewStudent()">Añadir</hack-button>
