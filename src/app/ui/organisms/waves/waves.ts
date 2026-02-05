@@ -13,7 +13,7 @@ export class Waves implements OnInit {
   protected _height = '100vh';
   protected _position = 'absolute';
   private readonly _MAX_HEIGHT = '100vh';
-  private readonly _MIN_HEIGHT = '12rem';
+  private readonly _MIN_HEIGHT = '10rem';
 
   ngOnInit(): void {
     this._eventBus.on(HomeIntersectionEvent).subscribe(({ IsIntersecting }) => {

@@ -18,6 +18,7 @@ section > * {
 section:not(.intersected) > * {
   translate: 0 25%;
   opacity: 0;
+  pointer-events: none;
 }
 
 hack-panel {
