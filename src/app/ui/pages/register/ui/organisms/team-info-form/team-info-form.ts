@@ -93,7 +93,7 @@ export class TeamInfoForm implements OnInit {
 
     { icon: 'institution', label: 'Nogales', value: Campus.NOGALES },
 
-    { icon: 'institution', label: 'Cuichoapa', value: Campus.CUICHOAPA },
+    { icon: 'institution', label: 'Cuichapa', value: Campus.CUICHAPA },
 
     { icon: 'institution', label: 'Tequila', value: Campus.TEQUILA },
 
@@ -133,7 +133,7 @@ export class TeamInfoForm implements OnInit {
     const campusMap: Record<Campus, string> = {
       [Campus.ZONGOLICA]: 'Zongolica',
       [Campus.NOGALES]: 'Nogales',
-      [Campus.CUICHOAPA]: 'Cuichapa',
+      [Campus.CUICHAPA]: 'Cuichapa',
       [Campus.TEQUILA]: 'Tequila',
       [Campus.TEHUIPANGO]: 'Tehuipango'
     };

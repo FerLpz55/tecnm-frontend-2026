@@ -35,7 +35,7 @@ project1.Likes = 12;
 const project2 = new Project();
 project2.Name = 'App de ventas';
 project2.Team = 'Equipo Tigres';
-project2.Campus = Campus.CUICHOAPA;
+project2.Campus = Campus.CUICHAPA;
 project2.Description =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam';
 project2.Likes = 8;

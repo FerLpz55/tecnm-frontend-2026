@@ -1,6 +1,6 @@
 export enum Campus {
   ZONGOLICA = 'Zongolica',
-  CUICHOAPA = 'Cuichoapa',
+  CUICHAPA = 'Cuichapa',
   NOGALES = 'Nogales',
   TEQUILA = 'Tequila',
   TEHUIPANGO = 'Tehuipango',
