@@ -12,28 +12,53 @@
 }
 
 :root {
-  font-size: 12px;
+  font-size: 10px;
   --white: #ffffff;
   --light: #98b1d4;
   --main: #004772;
   --opaque: #618cbe;
 
   --title-font-family: Montserrat;
-  --title-font-size: 3rem;
+  --title-font-size: 2.5rem;
   --title-font-weight: 400;
 
   --subtitle-font-family: ABeeZee;
-  --subtitle-font-size: 2rem;
+  --subtitle-font-size: 1.6rem;
   --subtitle-font-weight: 400;
 
   --bold-font-family: Poppins;
-  --bold-font-size: 1.25rem;
+  --bold-font-size: 1.2rem;
   --bold-font-weight: 700;
 
   --text-font-family: Poppins;
-  --text-font-size: 1.17rem;
+  --text-font-size: 1.1rem;
   --text-font-weight: 400;
 
   --trans-duration: 0.5s;
   --trans-easing: ease;
+}
+
+/* Tablets y pantallas medianas */
+@media (min-width: 768px) {
+  :root {
+    font-size: 11px;
+    --title-font-size: 2.8rem;
+    --subtitle-font-size: 1.8rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  :root {
+    font-size: 12px;
+    --title-font-size: 3rem;
+    --subtitle-font-size: 2rem;
+    --bold-font-size: 1.25rem;
+    --text-font-size: 1.17rem;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
