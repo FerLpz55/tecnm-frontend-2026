@@ -19,13 +19,20 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": ["src/styles.css", "node_modules/swiper/swiper-bundle.min.css"]
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
@@ -71,7 +78,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": ["src/styles.css", "node_modules/swiper/swiper-bundle.min.css"]
@@ -79,5 +87,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d4056d72-08fa-4685-a931-5340bd00456d"
   }
 }

@@ -1,23 +1,46 @@
 <hack-panel>
+  <!-- Título del proyecto -->
   <hack-title>{{ Project.Name }}</hack-title>
+
+  <!-- Nombre del equipo -->
   <hack-bold>Equipo {{ Project.Team }}</hack-bold>
+
+  <!-- Etiquetas -->
   <div class="tags">
-    <hack-button class="tag campus" mode="dark" icon="location"
-      >Campus {{ Project.Campus }}</hack-button
+
+    <!-- Campus -->
+    <hack-button
+      class="tag campus"
+      mode="dark"
+      icon="location"
     >
-    <hack-button class="tag semester" mode="dark" icon="student"
-      >{{ Project.SemesterRange | semester }} Semestre</hack-button
+      Campus {{ Project.Campus }}
+    </hack-button>
+
+    <!-- Integrantes -->
+    <hack-button
+      class="tag members"
+      mode="dark"
+      icon="team"
     >
-    <hack-button class="tag members" mode="dark" icon="team"
-      >{{ Project.Members.size }} integrantes</hack-button
-    >
+      {{ Project.Members.size }} integrantes
+    </hack-button>
+
   </div>
+
+  <!-- Descripción -->
   <p>
-    <hack-text
-      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam deleniti fuga pariatur
-      praesentium consectetur tempore assumenda quaerat id, non accusantium ipsa, sint esse ad
-      laboriosam facere, voluptatibus officiis commodi!
+    <hack-text>
+      {{ Project.Description }}
     </hack-text>
   </p>
-  <hack-button icon="like" mode="outlined" class="like">{{ Project.Likes }}</hack-button>
+
+  <!-- Likes -->
+  <hack-button
+    icon="like"
+    mode="outlined"
+    class="like"
+  >
+    {{ Project.Likes }}
+  </hack-button>
 </hack-panel>

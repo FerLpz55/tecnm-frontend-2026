@@ -8,6 +8,7 @@ import { SafeHtmlPipe } from '../../pipes/safe-html/safe-html-pipe';
   styleUrl: './icon.css',
 })
 export class Icon implements OnChanges {
+
   @Input() icon!: string;
   @Input() src!: string;
 
@@ -18,14 +19,20 @@ export class Icon implements OnChanges {
   }
 
   private async loadIcon() {
+
     if (!this.icon && !this.src) return;
-    let src = this.src ? this.src : `/icons/${this.icon}.svg`;
+
+    // Ruta absoluta desde la raíz para servir assets correctamente
+    const path = this.src
+      ? this.src
+      : `/icons/${this.icon}.svg`;
+
     try {
-      let data = await fetch(src);
-      this.svg = await data.text();
+      const response = await fetch(path);
+      this.svg = await response.text();
     } catch (error) {
-      console.error(error);
-      this.svg = 'x';
+      console.error('Error loading icon:', path);
+      this.svg = '';
     }
   }
 }

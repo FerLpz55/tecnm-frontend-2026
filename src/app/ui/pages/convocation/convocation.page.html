@@ -1,36 +1,63 @@
-<section hackIntersectable BottomMargin="-35%" TopMargin="-70%">
-  <div class="left">
-    <h2>
-      <hack-title>Unete al reto</hack-title>
-    </h2>
-    <p>
-      <hack-text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </hack-text>
-    </p>
-    <hack-button icon="speaker" mode="dark">Descargar convocatoria</hack-button>
-  </div>
-  <div class="right">
-    <figure class="hour">
-      <hack-icon icon="time" />
-      <hack-subtitle>8:00 AM</hack-subtitle>
-    </figure>
+<section
+  hackIntersectable
+  BottomMargin="-35%"
+  TopMargin="-70%"
+  class="convocation"
+>
 
-    <figure class="date">
-      <hack-icon icon="date" />
-      <hack-subtitle>01 - 03 - 2026</hack-subtitle>
-    </figure>
-    <figure class="place">
-      <hack-icon icon="location" />
-      <hack-subtitle>
-        Laguna de Nogales
-        <br />
-        Nogales, Veracruz
-      </hack-subtitle>
-    </figure>
+  <!-- ============ IZQUIERDA ============ -->
+  <div class="left">
+
+    <hack-title>Convocatoria Laguna Hack 2026</hack-title>
+
+    <hack-text>
+      El Laguna Hack 2026 es un evento de innovación tecnológica donde
+      estudiantes desarrollan soluciones reales en un entorno colaborativo.
+    </hack-text>
+
+    <hack-text>
+      Participan alumnos de Nogales, Zongolica, Tequila, Cuichapa y Tehuipango,
+      en equipos de 3 a 5 integrantes.
+    </hack-text>
+
+    <hack-text>
+      Cada equipo contará con asesoría docente y deberá seguir los
+      lineamientos oficiales.
+    </hack-text>
+
+    <!-- BOTONES -->
+    <div class="pdf-actions">
+
+      <!-- ABRIR EN NUEVA VENTANA -->
+      <a
+        class="convocation-btn"
+        href="/docs/convocatoria.pdf"
+        target="_blank"
+      >
+        Ver en otra página
+      </a>
+
+      <!-- DESCARGAR -->
+      <a
+        class="convocation-btn"
+        href="/docs/convocatoria.pdf"
+        download="Convocatoria-LagunaHack-2026.pdf"
+      >
+        Descargar
+      </a>
+
+    </div>
+
   </div>
+
+
+  <!-- ============ DERECHA (PDF) ============ -->
+  <div class="right">
+    <iframe
+      src="/docs/convocatoria.pdf"
+      class="pdf-viewer"
+      title="Convocatoria Laguna Hack 2026"
+    ></iframe>
+  </div>
+
 </section>

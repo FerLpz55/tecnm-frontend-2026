@@ -4,6 +4,8 @@ import { Student } from './student';
 export class Team {
   Name: string | null = null;
   Campus: Campus | null = null;
+  Extension: string | null = null;
+
 
   private readonly _members = new Set<Student>();
   public get Members() {

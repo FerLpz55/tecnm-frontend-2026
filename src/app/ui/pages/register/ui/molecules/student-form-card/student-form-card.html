@@ -1,5 +1,8 @@
+
 <hack-panel>
   <hack-labeled-text icon="person">Integrante</hack-labeled-text>
+
+  <!-- Nombre -->
   <hack-input-label icon="person" class="name">
     <hack-text-input
       [(ngModel)]="Student.Name"
@@ -7,22 +10,23 @@
       Placeholder="Nombre completo"
     />
   </hack-input-label>
-  <div class="row">
-    <hack-select
-      [options]="_semesterOptions"
-      [removeDefault]="true"
-      [default]="-1"
-      [showIcons]="true"
-      class="semester"
-      [(ngModel)]="Student.Semester"
+
+  <!-- Correo institucional -->
+  <hack-input-label icon="mail" class="email">
+    <hack-text-input
+      [(ngModel)]="Student.InstitutionalEmail"
       (ngModelChange)="Change.emit()"
+      Placeholder="Correo institucional"
+      type="email"
     />
-    <hack-input-label icon="credential" class="control-number">
-      <hack-text-input
-        [(ngModel)]="Student.ControlNumber"
-        (ngModelChange)="Change.emit()"
-        Placeholder="N. Control"
-      />
-    </hack-input-label>
-  </div>
+  </hack-input-label>
+
+  <!-- Botón para eliminar -->
+  <hack-button
+    icon="delete"
+    mode="outlined"
+    (Click)="Remove.emit(Student)"
+  >
+    Eliminar
+  </hack-button>
 </hack-panel>

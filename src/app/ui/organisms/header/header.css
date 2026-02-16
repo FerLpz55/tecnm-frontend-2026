@@ -1,22 +1,65 @@
+/* MOBILE FIRST */
 :host {
   position: relative;
-  z-index: 20;
+  z-index: 100;
 }
 
 header {
   width: 100%;
-  height: 5.75rem;
+  height: auto;
+  min-height: 60px;
   position: sticky;
   top: 0;
+  background: linear-gradient(135deg, #1e5a7a 0%, #2d7fa8 100%);
+  z-index: 100;
+  padding: 0.5rem;
 }
 
 ul {
-  padding: 1rem 0;
+  padding: 0.5rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+ul li {
+  flex: 1;
+  min-width: 80px;
+  display: flex;
+  justify-content: center;
 }
 
 hack-button {
   --btn-color: var(--white);
+  --btn-padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  width: 100%;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  header {
+    height: 5.75rem;
+    padding: 0;
+  }
+
+  ul {
+    padding: 1rem 0;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
+  ul li {
+    flex: initial;
+    min-width: auto;
+  }
+
+  hack-button {
+    --btn-padding: 1rem 2rem;
+    font-size: 1rem;
+    width: auto;
+  }
 }

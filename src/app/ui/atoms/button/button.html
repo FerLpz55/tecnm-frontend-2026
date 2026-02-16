@@ -1,7 +1,30 @@
-<button (click)="Click.emit()" [type]="type" [disabled]="disabled" (focusin)="isFocused = true"
-        (focusout)="isFocused = false">
-  <hack-icon [icon]="icon"/>
+<!-- SI ES LINK -->
+<a *ngIf="isLink"
+   [href]="href"
+   [target]="target"
+   [download]="download !== undefined ? (download === true ? '' : download) : null"
+   [class.disabled]="disabled">
+
+  <hack-icon *ngIf="icon" [icon]="icon"></hack-icon>
+
   <hack-bold>
     <ng-content></ng-content>
   </hack-bold>
+
+</a>
+
+<!-- SI ES BUTTON NORMAL -->
+<button *ngIf="!isLink"
+        (click)="Click.emit()"
+        [type]="type"
+        [disabled]="disabled"
+        (focusin)="isFocused = true"
+        (focusout)="isFocused = false">
+
+  <hack-icon *ngIf="icon" [icon]="icon"></hack-icon>
+
+  <hack-bold>
+    <ng-content></ng-content>
+  </hack-bold>
+
 </button>

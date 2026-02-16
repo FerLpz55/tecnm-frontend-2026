@@ -1,24 +1,29 @@
+/* MOBILE FIRST */
 :host {
   display: block;
   position: relative;
   width: 100%;
-  height: calc(100vh - 5.75rem);
+  min-height: calc(100vh - 5.75rem);
   z-index: 20;
 }
 
 section {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   translate: -50% -50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 600px;
 }
 
 img {
-  width: 30rem;
+  width: 100%;
+  max-width: 280px;
 }
 
 img,
@@ -34,6 +39,7 @@ hack-text {
 
 nav {
   transition-delay: 0.2s;
+  width: 100%;
 }
 
 section:not(.intersected) :is(img, hack-text, nav) {
@@ -43,14 +49,57 @@ section:not(.intersected) :is(img, hack-text, nav) {
 
 p {
   text-align: center;
+  padding: 0 1rem;
 }
 
 nav ul {
   display: flex;
-  flex-direction: row;
-  gap: 4rem;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+nav ul li {
+  width: 100%;
 }
 
 hack-button {
   --btn-color: var(--main);
+  width: 100%;
+}
+
+/* TABLET Y DESKTOP */
+@media (min-width: 768px) {
+  section {
+    gap: 2rem;
+    max-width: none;
+  }
+
+  img {
+    max-width: 400px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 2rem;
+    width: auto;
+  }
+
+  nav ul li {
+    width: auto;
+  }
+
+  hack-button {
+    width: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  img {
+    max-width: 30rem;
+  }
+
+  nav ul {
+    gap: 4rem;
+  }
 }

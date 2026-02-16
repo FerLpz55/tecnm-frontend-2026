@@ -7,4 +7,20 @@ import { Button } from '../../atoms/button/button';
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
-export class Header { }
+export class Header {
+
+  protected scrollToSection(sectionId: string): void {
+    const element = document.querySelector(sectionId);
+    if (element) {
+      const headerOffset = 92; // Altura del header (5.75rem ≈ 92px)
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }
+
+}

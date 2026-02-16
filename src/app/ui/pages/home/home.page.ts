@@ -31,4 +31,11 @@ export class HomePage implements AfterViewInit, OnDestroy {
   ngOnDestroy(): void {
     this._intersectionObserver.disconnect();
   }
+
+  protected scrollToSection(selector: string): void {
+    const element = document.querySelector(selector);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

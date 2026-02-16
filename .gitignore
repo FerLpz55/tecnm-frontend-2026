@@ -42,3 +42,8 @@ testem.log
 Thumbs.db
 
 .nvim.lua
+
+# Environment variables
+.env
+.env.local
+.env.*.local

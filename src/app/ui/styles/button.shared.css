@@ -65,9 +65,16 @@ hack-text {
 }
 
 :host[mode='outlined'] {
+  hack-icon,
+  hack-text,
+  hack-bold {
+    color: var(--btn-color);
+  }
+
   button,
   a {
     border: 1px solid var(--main);
+    background-color: transparent;
   }
 }
 
