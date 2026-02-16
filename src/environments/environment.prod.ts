@@ -1,14 +1,8 @@
 // Configuración de producción
-// Vercel reemplazará estos valores durante el build usando variables de entorno
-
-declare const process: any;
-
 export const environment = {
   production: true,
   supabase: {
-    // @ts-ignore - Variables inyectadas por Vercel en build time
-    url: typeof process !== 'undefined' ? (process.env['NG_APP_SUPABASE_URL'] || '') : '',
-    // @ts-ignore - Variables inyectadas por Vercel en build time
-    anonKey: typeof process !== 'undefined' ? (process.env['NG_APP_SUPABASE_ANON_KEY'] || '') : ''
+    url: 'https://okhvgoqbbzindwnfexmj.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9raHZnb3FiYnppbmR3bmZleG1qIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU5NzI5ODEsImV4cCI6MjAzMTU0ODk4MX0.sb_publishable_C_oWu93lDpSGfviiDeoO_Q_3rGtini9'
   }
 };
