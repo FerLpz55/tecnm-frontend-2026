@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/laguna-hack-frontend/browser",
+  "outputDirectory": "dist/LagunaHack-Frontend",
   "framework": "angular",
   "rewrites": [
     {
