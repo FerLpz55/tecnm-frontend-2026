@@ -47,3 +47,6 @@ Thumbs.db
 .env
 .env.local
 .env.*.local
+
+# Ignorar el archivo de entorno de desarrollo de Angular
+/src/environments/environment.ts
