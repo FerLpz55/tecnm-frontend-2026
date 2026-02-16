@@ -5,7 +5,8 @@
 }
 
 hack-gallery {
-  width: 34.33rem;
+  width: 100%;
+  max-width: 34.33rem;
 }
 
 hack-button {

@@ -97,6 +97,8 @@ export class TeamInfoForm implements OnInit {
 
     { icon: 'institution', label: 'Tequila', value: Campus.TEQUILA },
 
+    { icon: 'institution', label: 'Tehuipango', value: Campus.TEHUIPANGO },
+
   ];
 
 
@@ -132,7 +134,8 @@ export class TeamInfoForm implements OnInit {
       [Campus.ZONGOLICA]: 'Zongolica',
       [Campus.NOGALES]: 'Nogales',
       [Campus.CUICHOAPA]: 'Cuichapa',
-      [Campus.TEQUILA]: 'Tequila'
+      [Campus.TEQUILA]: 'Tequila',
+      [Campus.TEHUIPANGO]: 'Tehuipango'
     };
 
     // Preparar datos para Supabase

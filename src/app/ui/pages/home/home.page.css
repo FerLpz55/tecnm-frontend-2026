@@ -21,14 +21,34 @@ section {
   max-width: 600px;
 }
 
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
 img {
   width: 100%;
   max-width: 280px;
 }
 
+.date-label {
+  display: inline-block;
+  background: var(--main);
+  color: var(--white);
+  font-family: var(--bold-font-family), sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  letter-spacing: 0.05em;
+}
+
 img,
 hack-text,
-nav {
+nav,
+.date-label {
   transition-property: translate, opacity;
   transition: var(--trans-duration) var(--trans-easing);
 }
@@ -37,12 +57,16 @@ hack-text {
   transition-delay: 0.1s;
 }
 
+.date-label {
+  transition-delay: 0.05s;
+}
+
 nav {
   transition-delay: 0.2s;
   width: 100%;
 }
 
-section:not(.intersected) :is(img, hack-text, nav) {
+section:not(.intersected) :is(img, hack-text, nav, .date-label) {
   translate: 0 -20%;
   opacity: 0;
 }
@@ -72,15 +96,20 @@ hack-button {
 @media (min-width: 768px) {
   section {
     gap: 2rem;
-    max-width: none;
+    max-width: 750px;
   }
 
   img {
     max-width: 400px;
   }
 
+  p {
+    max-width: 650px;
+  }
+
   nav ul {
     flex-direction: row;
+    justify-content: center;
     gap: 2rem;
     width: auto;
   }
@@ -95,8 +124,16 @@ hack-button {
 }
 
 @media (min-width: 1024px) {
+  section {
+    max-width: 850px;
+  }
+
   img {
     max-width: 30rem;
+  }
+
+  p {
+    max-width: 700px;
   }
 
   nav ul {

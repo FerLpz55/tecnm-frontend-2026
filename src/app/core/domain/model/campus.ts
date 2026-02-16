@@ -3,4 +3,5 @@ export enum Campus {
   CUICHOAPA = 'Cuichoapa',
   NOGALES = 'Nogales',
   TEQUILA = 'Tequila',
+  TEHUIPANGO = 'Tehuipango',
 }
