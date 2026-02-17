@@ -105,6 +105,30 @@ section.intersected .right {
   z-index: 1;
 }
 
+/* FALLBACK PARA iOS/MÓVILES */
+
+.pdf-fallback {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 0.8rem;
+  border: 2px solid var(--opaque);
+  text-align: center;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .pdf-viewer {
+    display: none;
+  }
+  .pdf-fallback {
+    display: flex;
+  }
+}
+
 /* TABLET Y DESKTOP */
 
 @media (min-width: 768px) {

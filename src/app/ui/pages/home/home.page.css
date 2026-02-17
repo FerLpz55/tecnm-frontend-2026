@@ -45,12 +45,58 @@ img {
   letter-spacing: 0.05em;
 }
 
+/* COUNTDOWN */
+
+.countdown {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.countdown-number {
+  font-family: var(--bold-font-family), sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--white);
+  line-height: 1;
+}
+
+.countdown-label {
+  font-family: var(--text-font-family), sans-serif;
+  font-size: 0.75rem;
+  color: var(--light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.countdown-separator {
+  font-family: var(--bold-font-family), sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--opaque);
+  line-height: 1;
+}
+
+/* TRANSICIONES */
+
 img,
 hack-text,
 nav,
-.date-label {
+.date-label,
+.countdown {
   transition-property: translate, opacity;
   transition: var(--trans-duration) var(--trans-easing);
+}
+
+.countdown {
+  transition-delay: 0.07s;
 }
 
 hack-text {
@@ -66,7 +112,7 @@ nav {
   width: 100%;
 }
 
-section:not(.intersected) :is(img, hack-text, nav, .date-label) {
+section:not(.intersected) :is(img, hack-text, nav, .date-label, .countdown) {
   translate: 0 -20%;
   opacity: 0;
 }

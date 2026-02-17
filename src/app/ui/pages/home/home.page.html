@@ -3,6 +3,29 @@
     <img src="/images/laguna-hack.webp" alt="" />
     <span class="date-label">05 DE MARZO DE 2026</span>
   </figure>
+
+  <!-- CUENTA REGRESIVA -->
+  <div class="countdown">
+    <div class="countdown-item">
+      <span class="countdown-number">{{ days() }}</span>
+      <span class="countdown-label">Días</span>
+    </div>
+    <span class="countdown-separator">:</span>
+    <div class="countdown-item">
+      <span class="countdown-number">{{ hours() }}</span>
+      <span class="countdown-label">Horas</span>
+    </div>
+    <span class="countdown-separator">:</span>
+    <div class="countdown-item">
+      <span class="countdown-number">{{ minutes() }}</span>
+      <span class="countdown-label">Min</span>
+    </div>
+    <span class="countdown-separator">:</span>
+    <div class="countdown-item">
+      <span class="countdown-number">{{ seconds() }}</span>
+      <span class="countdown-label">Seg</span>
+    </div>
+  </div>
   <p>
     <hack-text>
       Desarrollar de manera colaborativa e intensiva, en un periodo de tiempo determinado de 10 horas,
