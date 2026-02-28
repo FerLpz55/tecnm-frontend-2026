@@ -140,6 +140,11 @@ export class StudentListInput
   // ACCIONES UI
   // ===============================
 
+  protected onStudentChange(): void {
+    this.onChange(this._students);
+  }
+
+
   protected AddNewStudent(): void {
 
     // Máximo 5

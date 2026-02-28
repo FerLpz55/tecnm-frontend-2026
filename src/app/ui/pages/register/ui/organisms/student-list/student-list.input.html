@@ -3,6 +3,7 @@
     <div class="swiper-slide">
       <hack-student-form-card
         [Student]="student"
+        (Change)="onStudentChange()"
         (Remove)="RemoveStudent($event)"
       />
     </div>
