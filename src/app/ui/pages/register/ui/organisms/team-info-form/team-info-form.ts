@@ -110,6 +110,8 @@ export class TeamInfoForm implements OnInit {
 
     if (this.isSubmitting) return;
 
+    this._form.controls.Members.updateValueAndValidity();
+
     if (this._form.invalid) {
       const errors = this._form.controls.Members.errors;
       if (errors?.['membersCount']) {

@@ -141,7 +141,7 @@ export class StudentListInput
   // ===============================
 
   protected onStudentChange(): void {
-    this.onChange(this._students);
+    this.onChange(new Set(this._students));
   }
 
 
