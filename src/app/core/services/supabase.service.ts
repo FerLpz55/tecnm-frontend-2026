@@ -84,6 +84,16 @@ export class SupabaseService {
       if (!studentsResponse.ok) {
         const error = await studentsResponse.text();
         console.error('Error al crear participantes:', error);
+
+        // Eliminar el equipo huérfano para no dejar registros inconsistentes
+        await fetch(`${this.SUPABASE_URL}/rest/v1/equipos?id=eq.${teamId}`, {
+          method: 'DELETE',
+          headers: {
+            'apikey': this.SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${this.SUPABASE_ANON_KEY}`
+          }
+        }).catch(e => console.error('Error al limpiar equipo huérfano:', e));
+
         return { success: false, message: 'Error al registrar los participantes' };
       }
 

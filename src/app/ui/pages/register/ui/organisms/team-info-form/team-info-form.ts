@@ -108,8 +108,19 @@ export class TeamInfoForm implements OnInit {
 
   protected async onSubmit(): Promise<void> {
 
+    if (this.isSubmitting) return;
+
     if (this._form.invalid) {
-      alert('Por favor completa todos los campos correctamente');
+      const errors = this._form.controls.Members.errors;
+      if (errors?.['membersCount']) {
+        alert('El equipo debe tener entre 3 y 5 integrantes');
+      } else if (errors?.['incompleteStudents']) {
+        alert('Todos los integrantes deben tener nombre y correo');
+      } else if (errors?.['duplicateEmails']) {
+        alert('Hay correos repetidos entre los integrantes');
+      } else {
+        alert('Por favor completa todos los campos correctamente');
+      }
       this._form.markAllAsTouched();
       return;
     }
@@ -122,7 +133,7 @@ export class TeamInfoForm implements OnInit {
     }
 
     // Validar cantidad de integrantes
-    const membersArray = Array.from(data.Members.values());
+    const membersArray = Array.from((data.Members as Set<Student>).values());
 
     if (membersArray.length < 3 || membersArray.length > 5) {
       alert('El equipo debe tener entre 3 y 5 integrantes');
@@ -141,11 +152,11 @@ export class TeamInfoForm implements OnInit {
     // Preparar datos para Supabase
     const registration: TeamRegistration = {
       teamName: data.Name,
-      campus: campusMap[data.Campus],
-      students: membersArray.map(student => ({
+      campus: campusMap[data.Campus as Campus],
+      students: membersArray.map((student: Student) => ({
         fullName: student.Name,
         email: student.InstitutionalEmail,
-        studentId: ''  // No hay matrícula en el modelo actual
+        studentId: ''
       }))
     };
 

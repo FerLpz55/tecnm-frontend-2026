@@ -115,9 +115,20 @@ export class StudentListInput
 
     // Debe haber entre 3 y 5 integrantes
     if (size < 3 || size > 5) {
-      return {
-        membersCount: true
-      };
+      return { membersCount: true };
+    }
+
+    // Cada integrante debe tener nombre y correo
+    for (const student of this._students) {
+      if (!student.Name?.trim() || !student.InstitutionalEmail?.trim()) {
+        return { incompleteStudents: true };
+      }
+    }
+
+    // No puede haber correos duplicados
+    const emails = Array.from(this._students).map(s => s.InstitutionalEmail.trim().toLowerCase());
+    if (new Set(emails).size !== emails.length) {
+      return { duplicateEmails: true };
     }
 
     return null;
